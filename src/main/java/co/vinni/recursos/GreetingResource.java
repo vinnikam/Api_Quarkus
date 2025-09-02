@@ -1,7 +1,6 @@
 package co.vinni.recursos;
 
-import co.vinni.dto.Temperatura;
-import co.vinni.servicio.TemperaturaService;
+
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import lombok.AllArgsConstructor;

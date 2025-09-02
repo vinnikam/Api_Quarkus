@@ -1,8 +1,7 @@
 package co.vinni.recursos;
 
-import co.vinni.dto.Temperatura;
-import co.vinni.entidades.Producto;
-import co.vinni.servicio.ProductoServicio;
+import co.vinni.entidades.Docente;
+import co.vinni.servicio.DocenteServicio;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -12,23 +11,23 @@ import lombok.AllArgsConstructor;
 
 import java.util.List;
 
-@Path("/producto")
+@Path("/docente")
 @AllArgsConstructor
-public class ProductoResouce {
+public class DocenteRecursos {
 
-    private ProductoServicio productoServicio;
+    private DocenteServicio docenteServicio;
 
     @POST
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
-    public Producto addProducto(Producto producto) {
-        return productoServicio.addProducto(producto);
+    public Docente addProducto(Docente producto) {
+        return docenteServicio.addDocente(producto);
     }
     @GET
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Producto> getProductos() {
-        return productoServicio.findAll();
+    public List<Docente> getProductos() {
+        return docenteServicio.findAll();
     }
 
 }
