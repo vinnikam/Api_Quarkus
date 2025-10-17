@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 
 import java.util.List;
 
-@Path("/docente")
+@Path("/docentes")
 @AllArgsConstructor
 public class DocenteRecursos {
 
@@ -20,13 +20,13 @@ public class DocenteRecursos {
     @POST
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
-    public Docente addProducto(Docente producto) {
+    public Docente addDocente(Docente producto) {
         return docenteServicio.addDocente(producto);
     }
     @GET
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Docente> getProductos() {
+    public List<Docente> getDocentes() {
         return docenteServicio.findAll();
     }
 
